@@ -1,0 +1,153 @@
+/* Custom Fonts */
+.font-cursive {
+    font-family: 'Great Vibes', cursive;
+}
+
+.font-handwriting {
+    font-family: 'Dancing Script', cursive;
+}
+
+.font-serif-title {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-sans-body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* Smooth scrolling and root setup */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff0f3;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f43f5e;
+    border-radius: 4px;
+}
+
+
+/* Glow and Glassmorphism Utility Effects */
+.glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 182, 193, 0.4);
+    box-shadow: 0 10px 30px rgba(225, 29, 72, 0.08);
+}
+
+.glass-card-dark {
+    background: rgba(40, 10, 20, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.glow-text {
+    text-shadow: 0 0 15px rgba(244, 63, 94, 0.4), 0 0 30px rgba(225, 29, 72, 0.2);
+}
+
+.glow-box {
+    box-shadow: 0 0 25px rgba(244, 63, 94, 0.25);
+}
+
+
+/* 3D Flip Card Effect */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+
+/* Candle Flame Animation */
+@keyframes flicker {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(-2deg);
+        opacity: 0.95;
+    }
+
+    20% {
+        transform: scale(1.1) rotate(2deg);
+        opacity: 1;
+    }
+
+    40% {
+        transform: scale(0.95) rotate(-1deg);
+        opacity: 0.85;
+    }
+
+    60% {
+        transform: scale(1.05) rotate(1deg);
+        opacity: 1;
+    }
+
+    80% {
+        transform: scale(1) rotate(-2deg);
+        opacity: 0.9;
+    }
+}
+
+.flame {
+    animation: flicker 1.2s infinite ease-in-out;
+    transform-origin: center bottom;
+    filter: drop-shadow(0 0 10px #f97316) drop-shadow(0 0 20px #eab308);
+}
+
+
+/* Envelope interactive styling */
+.envelope-wrapper {
+    perspective: 1000px;
+}
+
+.envelope-flap {
+    transform-origin: top;
+    transition: transform 0.6s ease-in-out;
+}
+
+.envelope-open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+
+/* Floating effect for icons */
+@keyframes gentle-float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(3deg);
+    }
+}
+
+.animate-float {
+    animation: gentle-float 4s ease-in-out infinite;
+}
